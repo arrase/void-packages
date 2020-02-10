@@ -1,0 +1,21 @@
+# Template file for 'fscrypt'
+pkgname=fscrypt
+version=0.2.5
+revision=1
+build_style=gnu-makefile
+hostmakedepends="go git"
+makedepends="pam-devel"
+short_desc="Tool for managing Linux filesystem encryption"
+maintainer="Juan Ezquerro LLanes <arrase@gamil.com>"
+license="Apache License 2.0"
+homepage="https://github.com/google/fscrypt"
+distfiles="https://github.com/google/fscrypt/archive/v${version}.tar.gz"
+checksum=3956e8f95d3a30fef6c03af2a14bb5549259e77c8dd0d0d52345d958ad1f99f9
+
+do_build() {
+  make bin/fscrypt
+}
+
+do_install() {
+ cp bin/fscrypt /usr/local/bin
+}
