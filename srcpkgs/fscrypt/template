@@ -15,7 +15,3 @@ checksum=3956e8f95d3a30fef6c03af2a14bb5549259e77c8dd0d0d52345d958ad1f99f9
 do_build() {
   make bin/fscrypt
 }
-
-do_install() {
- cp bin/fscrypt /usr/local/bin
-}
